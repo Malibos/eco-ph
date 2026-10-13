@@ -116,9 +116,11 @@
   .cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
 
   footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:13px}
-  .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  .footer-links{display:flex;gap:22px}
+  .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  .footer-links{display:flex;gap:22px;flex-wrap:wrap}
   .footer-links a:hover{color:var(--green)}
+  .footer-email{color:var(--green);font-weight:600}
+  .footer-email:hover{text-decoration:underline}
 
   @media (max-width:960px){
     .cards,.resources-grid{grid-template-columns:1fr 1fr}
@@ -131,6 +133,7 @@
     .cards,.resources-grid,.impact-grid{grid-template-columns:1fr}
     .hero{min-height:90vh}
     .hero-inner{padding:100px 0 60px}
+    .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
   }
 </style>
 </head>
@@ -244,14 +247,17 @@
     <p>Whether you're a community, investor or partner — there's a place for you in building a zero-waste future.</p>
     <div class="btns">
       <a href="#involved" class="btn btn-primary">Get Involved →</a>
-      <a href="#contact" class="btn btn-ghost">Contact Us</a>
+      <a href="mailto:hello@eco-ph.org" class="btn btn-ghost">Contact Us</a>
     </div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="container footer-inner">
-    <div>© 2026 eco-ph.org — Environmental Solutions for a Sustainable Philippines</div>
+    <div>
+      © 2026 eco-ph.org — Environmental Solutions for a Sustainable Philippines<br>
+      <a href="mailto:hello@eco-ph.org" class="footer-email">hello@eco-ph.org</a>
+    </div>
     <div class="footer-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
