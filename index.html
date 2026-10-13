@@ -10,31 +10,21 @@
     --bg:#0b1220;
     --bg2:#0f1a2e;
     --card:#13203a;
-    --card2:#172845;
     --text:#e8eef7;
     --muted:#9fb0c7;
     --green:#22c55e;
     --green2:#16a34a;
     --line:rgba(255,255,255,.08);
     --radius:16px;
-    --shadow:0 10px 30px rgba(0,0,0,.35);
     --max:1180px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);color:var(--text);line-height:1.6;
-  }
+  body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .container{max-width:var(--max);margin:0 auto;padding:0 24px}
-
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(11,18,32,.85);backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
-  }
+  header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
   .logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--green),#0ea5e9);display:grid;place-items:center;font-size:18px;box-shadow:0 0 18px rgba(34,197,94,.35)}
@@ -43,28 +33,13 @@
   nav ul{display:flex;gap:28px;list-style:none;align-items:center}
   nav a{font-size:14px;font-weight:600;color:var(--muted);transition:.2s}
   nav a:hover{color:var(--text)}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;
-    border:1px solid transparent;cursor:pointer;transition:.2s;
-  }
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.2s}
   .btn-primary{background:var(--green);color:#06240f}
   .btn-primary:hover{background:var(--green2);transform:translateY(-1px)}
   .btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
   .btn-ghost:hover{border-color:var(--green);color:var(--green)}
   .menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
-
-  /* HERO — full bleed background */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:
-      linear-gradient(90deg, rgba(11,18,32,0.92) 0%, rgba(11,18,32,0.75) 40%, rgba(11,18,32,0.35) 70%, rgba(11,18,32,0.1) 100%),
-      url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
-    color:var(--text);
-  }
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(90deg, rgba(11,18,32,0.92) 0%, rgba(11,18,32,0.75) 40%, rgba(11,18,32,0.35) 70%, rgba(11,18,32,0.1) 100%), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;color:var(--text)}
   .hero-inner{position:relative;z-index:1;max-width:680px;padding:120px 0 80px}
   .hero h1{font-size:clamp(36px,5.5vw,64px);line-height:1.05;font-weight:800;letter-spacing:-.8px;margin-bottom:18px}
   .hero h1 em{font-style:normal;color:var(--green)}
@@ -72,19 +47,14 @@
   .hero-stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:48px}
   .stat b{display:block;font-size:28px;font-weight:800}
   .stat span{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-
   section{padding:80px 0}
   .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:36px;flex-wrap:wrap}
   .section-head h2{font-size:clamp(24px,3vw,34px);font-weight:800}
   .section-head p{color:var(--muted);max-width:460px}
   .link-arrow{color:var(--green);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px}
   .link-arrow:hover{gap:10px}
-
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    overflow:hidden;transition:.25s;display:flex;flex-direction:column;
-  }
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
   .card:hover{transform:translateY(-4px);border-color:rgba(34,197,94,.4);box-shadow:0 16px 40px rgba(0,0,0,.4)}
   .card-img{aspect-ratio:16/10;overflow:hidden;background:#0a1424}
   .card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
@@ -94,51 +64,34 @@
   .card h3{font-size:18px;font-weight:800;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
   .card p{color:var(--muted);font-size:14px;flex:1;margin-bottom:16px}
   .card .link-arrow{margin-top:auto}
-
   .impact{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
   .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .impact-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center}
   .impact-item .icon{font-size:28px;margin-bottom:12px}
   .impact-item b{display:block;font-size:30px;font-weight:800;color:var(--green)}
   .impact-item span{font-size:13px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
-
   .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .res-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
   .res-card:hover{border-color:rgba(34,197,94,.4)}
   .res-card .tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
   .res-card h3{font-size:17px;margin-bottom:8px}
   .res-card p{color:var(--muted);font-size:14px}
-
   .cta{text-align:center;padding:90px 0;position:relative;overflow:hidden}
   .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(34,197,94,.12), transparent 65%)}
   .cta h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin-bottom:14px;position:relative}
   .cta p{color:var(--muted);max-width:560px;margin:0 auto 30px;position:relative}
   .cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
-
   footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:13px}
   .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
   .footer-links{display:flex;gap:22px;flex-wrap:wrap}
   .footer-links a:hover{color:var(--green)}
   .footer-email{color:var(--green);font-weight:600}
   .footer-email:hover{text-decoration:underline}
-
-  @media (max-width:960px){
-    .cards,.resources-grid{grid-template-columns:1fr 1fr}
-    .impact-grid{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:640px){
-    nav ul{display:none}
-    .menu-toggle{display:block}
-    nav.open ul{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);padding:20px;gap:18px}
-    .cards,.resources-grid,.impact-grid{grid-template-columns:1fr}
-    .hero{min-height:90vh}
-    .hero-inner{padding:100px 0 60px}
-    .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
-  }
+  @media (max-width:960px){.cards,.resources-grid{grid-template-columns:1fr 1fr}.impact-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){nav ul{display:none}.menu-toggle{display:block}nav.open ul{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);padding:20px;gap:18px}.cards,.resources-grid,.impact-grid{grid-template-columns:1fr}.hero{min-height:90vh}.hero-inner{padding:100px 0 60px}.footer-inner{flex-direction:column;align-items:flex-start;gap:16px}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="container nav">
     <a href="#home" class="logo">
@@ -158,7 +111,6 @@
     <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">☰</button>
   </div>
 </header>
-
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-inner">
@@ -173,7 +125,6 @@
     </div>
   </div>
 </section>
-
 <section id="projects">
   <div class="container">
     <div class="section-head">
@@ -182,7 +133,7 @@
     </div>
     <div class="cards">
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1673191898498-9bac443b2407?auto=format&fit=crop&w=900&q=80" alt="Biogas tanks in green field"></div>
+        <div class="card-img"><img src="data:image/jpeg;base64,PLACEHOLDER_BIOGAS" alt="Biogas green tanks among palms with energy cables"></div>
         <div class="card-body">
           <div class="card-num">01</div>
           <h3>Biogas Solutions</h3>
@@ -191,7 +142,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Solar panels"></div>
+        <div class="card-img"><img src="data:image/jpeg;base64,PLACEHOLDER_SOLAR" alt="Solar panels on tropical coast with infrastructure"></div>
         <div class="card-body">
           <div class="card-num">02</div>
           <h3>Battery Storage</h3>
@@ -200,7 +151,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="card-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Power infrastructure"></div>
+        <div class="card-img"><img src="data:image/jpeg;base64,PLACEHOLDER_WTE" alt="Waste-to-energy hall with truck tipping into hopper"></div>
         <div class="card-body">
           <div class="card-num">03</div>
           <h3>Waste-to-Energy</h3>
@@ -211,7 +162,6 @@
     </div>
   </div>
 </section>
-
 <section class="impact" id="impact">
   <div class="container">
     <div class="section-head">
@@ -226,7 +176,6 @@
     </div>
   </div>
 </section>
-
 <section id="resources">
   <div class="container">
     <div class="section-head">
@@ -240,7 +189,6 @@
     </div>
   </div>
 </section>
-
 <section class="cta" id="support">
   <div class="container">
     <h2>Join the movement for a sustainable Philippines</h2>
@@ -251,7 +199,6 @@
     </div>
   </div>
 </section>
-
 <footer id="contact">
   <div class="container footer-inner">
     <div>
@@ -267,6 +214,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>
